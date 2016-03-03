@@ -1,0 +1,586 @@
+\hypertarget{classMatlabIO}{}\section{Matlab\+I\+O Class Reference}
+\label{classMatlabIO}\index{Matlab\+I\+O@{Matlab\+I\+O}}
+
+
+Matlab Mat file parser for C++ Open\+C\+V.  
+
+
+
+
+{\ttfamily \#include $<$Matlab\+I\+O.\+hpp$>$}
+
+
+
+Collaboration diagram for Matlab\+I\+O\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMatlabIO_aff789857e946a732c81e340858d99577}{Matlab\+I\+O} ()
+\item 
+\hyperlink{classMatlabIO_acdc6545c9c9a09ff63965a65beebc1d7}{$\sim$\+Matlab\+I\+O} ()
+\item 
+std\+::string \hyperlink{classMatlabIO_ac14e19dce8bde88ffaac0ef062e77f8c}{filename} (void)
+\item 
+bool \hyperlink{classMatlabIO_a8827f80e835be574147e416397d7136d}{open} (std\+::string \hyperlink{classMatlabIO_ac14e19dce8bde88ffaac0ef062e77f8c}{filename}, std\+::string mode)
+\begin{DoxyCompactList}\small\item\em Open a filestream for reading or writing. \end{DoxyCompactList}\item 
+bool \hyperlink{classMatlabIO_a77a8a636fd3069dab8b8cf27998eeaf3}{close} (void)
+\begin{DoxyCompactList}\small\item\em close the filestream and release all resources \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} $>$ \hyperlink{classMatlabIO_aa6bcbec37f79990c3b9b5cd1d4d15c1c}{read} (void)
+\begin{DoxyCompactList}\small\item\em Read all variables from a file. \end{DoxyCompactList}\item 
+void \hyperlink{classMatlabIO_a9ee52feb6ef61a3c8976da05757d40d1}{whos} (std\+::vector$<$ \hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} $>$ variables) const 
+\begin{DoxyCompactList}\small\item\em Print a formatted list of the contents of a file. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{classMatlabIO_ae1bcaa4c1311943f9d4705bc1a26f30b}{find} (std\+::vector$<$ \hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} $>$ \&variables, std\+::string name) const 
+\item 
+\hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} \hyperlink{classMatlabIO_a942611dfb873b5a0130ef2b19e57dad5}{find} (std\+::vector$<$ \hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} $>$ \&variables, std\+::string name) const 
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{classMatlabIO_a1a33cc9fd234f6c65560706a86869813}{type\+Equals} (std\+::vector$<$ \hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} $>$ \&variables, std\+::string name) const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classMatlabIO_a1170728ac5394d9d3d2647dc238838cb}{is\+Primitive\+Type} (void) const 
+\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} \hyperlink{classMatlabIO_a86a5a57fe5ef8f636c2ee8838b3ee172}{construct\+Matrix} (vector$<$ char $>$ \&name, vector$<$ uint32\+\_\+t $>$ \&dims, vector$<$ char $>$ \&real, vector$<$ char $>$ \&imag, uint32\+\_\+t stor\+\_\+type)
+\begin{DoxyCompactList}\small\item\em construct a matrix from an extracted set of fields \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMatlabIO_a2b03786157af35694744fe3a0dfe7de7}{get\+Header} (void)
+\begin{DoxyCompactList}\small\item\em get the .Mat file header information \end{DoxyCompactList}\item 
+void \hyperlink{classMatlabIO_abd621bf430da76393e90c182b3f05cd3}{set\+Header} (void)
+\item 
+bool \hyperlink{classMatlabIO_abe1cd90d98ee3ae4c9b1e0597e250339}{has\+Variable} (void)
+\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} \hyperlink{classMatlabIO_af7791c0ba5df21252b5408ea4e22f33b}{construct\+Matrix} (std\+::vector$<$ char $>$ \&name, std\+::vector$<$ uint32\+\_\+t $>$ \&dims, std\+::vector$<$ char $>$ \&real, std\+::vector$<$ char $>$ \&imag, uint32\+\_\+t stor\+\_\+type)
+\item 
+\hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} \hyperlink{classMatlabIO_af6932c5fdd2333201bef549c52a7febb}{construct\+String} (std\+::vector$<$ char $>$ \&name, std\+::vector$<$ uint32\+\_\+t $>$ \&dims, std\+::vector$<$ char $>$ \&real)
+\begin{DoxyCompactList}\small\item\em construct a string from an extracted set of fields \end{DoxyCompactList}\item 
+\hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} \hyperlink{classMatlabIO_aed0962e7b0c5bd53153b429e9e28fa25}{construct\+Sparse} (std\+::vector$<$ char $>$ \&name, std\+::vector$<$ uint32\+\_\+t $>$ \&dims, std\+::vector$<$ char $>$ \&real, std\+::vector$<$ char $>$ \&imag)
+\begin{DoxyCompactList}\small\item\em construct a sparse matrix \end{DoxyCompactList}\item 
+\hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} \hyperlink{classMatlabIO_ae70205ee74fc3b5ca831265317d53afe}{construct\+Cell} (std\+::vector$<$ char $>$ \&name, std\+::vector$<$ uint32\+\_\+t $>$ \&dims, std\+::vector$<$ char $>$ \&real)
+\begin{DoxyCompactList}\small\item\em construct a cell array \end{DoxyCompactList}\item 
+\hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} \hyperlink{classMatlabIO_ab5a35f3b0b204a182b7e6e0db857b8f6}{construct\+Struct} (std\+::vector$<$ char $>$ \&name, std\+::vector$<$ uint32\+\_\+t $>$ \&dims, std\+::vector$<$ char $>$ \&real)
+\begin{DoxyCompactList}\small\item\em construct a structure \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classMatlabIO_a49eeece26cd859efe5057a42a1964df5}{read\+Variable\+Tag} (uint32\+\_\+t \&data\+\_\+type, uint32\+\_\+t \&dbytes, uint32\+\_\+t \&wbytes, const char $\ast$data)
+\begin{DoxyCompactList}\small\item\em interpret the variable header information \end{DoxyCompactList}\item 
+\hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} \hyperlink{classMatlabIO_a381c9b5d7d30ae14ab62b7db18cd10ea}{collate\+Matrix\+Fields} (uint32\+\_\+t data\+\_\+type, uint32\+\_\+t nbytes, std\+::vector$<$ char $>$ data)
+\begin{DoxyCompactList}\small\item\em interpret all fields of a matrix \end{DoxyCompactList}\item 
+std\+::vector$<$ char $>$ \hyperlink{classMatlabIO_a40d54d0d924bfba7f50ca14ed3e728e3}{uncompress\+Variable} (uint32\+\_\+t \&data\+\_\+type, uint32\+\_\+t \&dbytes, uint32\+\_\+t \&wbytes, const std\+::vector$<$ char $>$ \&data)
+\begin{DoxyCompactList}\small\item\em uncompress a variable \end{DoxyCompactList}\item 
+\hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} \hyperlink{classMatlabIO_a0f491c5542d740b34d20d2ee4d561f73}{read\+Variable} (uint32\+\_\+t data\+\_\+type, uint32\+\_\+t nbytes, const std\+::vector$<$ char $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Interpret a variable from a binary block of data. \end{DoxyCompactList}\item 
+\hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} \hyperlink{classMatlabIO_a40b79c5058418d9a2fee4706a9537bab}{read\+Block} (void)
+\begin{DoxyCompactList}\small\item\em read a block of data from the file being parsed \end{DoxyCompactList}\item 
+\hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} \hyperlink{classMatlabIO_a892a7998a32f4445dc64cd462d3f5622}{uncompress\+From\+Bin} (std\+::vector$<$ char $>$ data, uint32\+\_\+t nbytes)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{classMatlabIO_a8eba798a14b97539bd81c1d34fcdcd1b}{header\+\_\+} \mbox{[}\hyperlink{classMatlabIO_af3e7951c954c76a502fe917a5438f102}{H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H}+1\mbox{]}
+\item 
+char \hyperlink{classMatlabIO_a14f39bfe5a3e5877a606d2e176444b81}{subsys\+\_\+} \mbox{[}\hyperlink{classMatlabIO_a0c4219a61f9d82ce15e309bfce18bab9}{S\+U\+B\+S\+Y\+S\+\_\+\+L\+E\+N\+G\+T\+H}+1\mbox{]}
+\item 
+char \hyperlink{classMatlabIO_a506fbbf7c76a1de2714f5fdc8d8ce891}{endian\+\_\+} \mbox{[}\hyperlink{classMatlabIO_a1eea9aa8bc8c8d92d70f75d1f2280357}{E\+N\+D\+I\+A\+N\+\_\+\+L\+E\+N\+G\+T\+H}+1\mbox{]}
+\item 
+int16\+\_\+t \hyperlink{classMatlabIO_a73155405392e0c20d5098f462ebf405d}{version\+\_\+}
+\item 
+bool \hyperlink{classMatlabIO_a5b205de924e7d93cce1878b96e8090ef}{byte\+\_\+swap\+\_\+}
+\item 
+int \hyperlink{classMatlabIO_a4af107166f7a854356b85a8ba8e2a575}{bytes\+\_\+read\+\_\+}
+\item 
+std\+::string \hyperlink{classMatlabIO_ad28ac286cb3061ccba7362fc54a56187}{filename\+\_\+}
+\item 
+\hyperlink{classEFStream}{E\+F\+Stream} \hyperlink{classMatlabIO_a7a1ace952046269e5c04680a06db336a}{fid\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classMatlabIO_af3e7951c954c76a502fe917a5438f102}{H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H} = 116
+\item 
+static const int \hyperlink{classMatlabIO_a0c4219a61f9d82ce15e309bfce18bab9}{S\+U\+B\+S\+Y\+S\+\_\+\+L\+E\+N\+G\+T\+H} = 8
+\item 
+static const int \hyperlink{classMatlabIO_a1eea9aa8bc8c8d92d70f75d1f2280357}{E\+N\+D\+I\+A\+N\+\_\+\+L\+E\+N\+G\+T\+H} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Matlab Mat file parser for C++ Open\+C\+V. 
+
+This class provides the capacity to read and write Mat files produced by Matlab. The Open\+C\+V cv\+::\+Mat class is used for the internal storage of matrices. The class also provides methods to inspect the contents of a Mat-\/file, read all variables, or read a single variable by name. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMatlabIO_aff789857e946a732c81e340858d99577}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!Matlab\+I\+O@{Matlab\+I\+O}}
+\index{Matlab\+I\+O@{Matlab\+I\+O}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{Matlab\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}Matlab\+I\+O\+::\+Matlab\+I\+O (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIO_aff789857e946a732c81e340858d99577}
+\hypertarget{classMatlabIO_acdc6545c9c9a09ff63965a65beebc1d7}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!````~Matlab\+I\+O@{$\sim$\+Matlab\+I\+O}}
+\index{````~Matlab\+I\+O@{$\sim$\+Matlab\+I\+O}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{$\sim$\+Matlab\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}Matlab\+I\+O\+::$\sim$\+Matlab\+I\+O (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIO_acdc6545c9c9a09ff63965a65beebc1d7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMatlabIO_a77a8a636fd3069dab8b8cf27998eeaf3}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!close@{close}}
+\index{close@{close}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}bool Matlab\+I\+O\+::close (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classMatlabIO_a77a8a636fd3069dab8b8cf27998eeaf3}
+
+
+close the filestream and release all resources 
+
+\begin{DoxyReturn}{Returns}
+true if the filestream was successfully closed, false otherwise. Even in the case of failure, the filestream will no longer point to a valid object 
+\end{DoxyReturn}
+\hypertarget{classMatlabIO_a381c9b5d7d30ae14ab62b7db18cd10ea}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!collate\+Matrix\+Fields@{collate\+Matrix\+Fields}}
+\index{collate\+Matrix\+Fields@{collate\+Matrix\+Fields}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{collate\+Matrix\+Fields}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matlab\+I\+O\+Container} Matlab\+I\+O\+::collate\+Matrix\+Fields (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{data\+\_\+type, }
+\item[{uint32\+\_\+t}]{nbytes, }
+\item[{std\+::vector$<$ char $>$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a381c9b5d7d30ae14ab62b7db18cd10ea}
+
+
+interpret all fields of a matrix 
+
+collate\+Matrix\+Fields takes a binary blob of data and strips out the matrix fields. These fields necessarily include\+: the variable dimensionality, the variable name and the real part of the variable data. It optionally includes the imaginary part of the variable data if that exists too. The extracted fields are used to either construct a matrix, cell array or struct, or a scalar in the case where the variable dimensionality is (1,1)
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+type} & the type of the data stored in the binary blob \\
+\hline
+{\em nbytes} & the number of bytes that constitute the binary blob \\
+\hline
+{\em data} & the binary blob\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the variable (matrix, struct, cell, scalar) wrapped in a container 
+\end{DoxyReturn}
+\hypertarget{classMatlabIO_ae70205ee74fc3b5ca831265317d53afe}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!construct\+Cell@{construct\+Cell}}
+\index{construct\+Cell@{construct\+Cell}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{construct\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matlab\+I\+O\+Container} Matlab\+I\+O\+::construct\+Cell (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ char $>$ \&}]{name, }
+\item[{std\+::vector$<$ uint32\+\_\+t $>$ \&}]{dims, }
+\item[{std\+::vector$<$ char $>$ \&}]{real}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_ae70205ee74fc3b5ca831265317d53afe}
+
+
+construct a cell array 
+
+If the variable is of type M\+A\+T\+\_\+\+C\+E\+L\+L, construct a cell array. This is done by iteratively calling \hyperlink{classMatlabIO_a381c9b5d7d30ae14ab62b7db18cd10ea}{collate\+Matrix\+Fields()} on each element of the cell, and storing the result in a vector$<$\+Matlab\+I\+O\+Container$>$. Cell fields may not have a name, but are still required to have a name tag. In this case, placeholder names are substituted. The dimensionality of the cell array is ignored, and the size is linearized in column major format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the variable name \\
+\hline
+{\em dims} & the dimesionality of the cell array (ignored) \\
+\hline
+{\em real} & the real part \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the wrapped cell array 
+\end{DoxyReturn}
+\hypertarget{classMatlabIO_af7791c0ba5df21252b5408ea4e22f33b}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!construct\+Matrix@{construct\+Matrix}}
+\index{construct\+Matrix@{construct\+Matrix}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{construct\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Matlab\+I\+O\+Container} Matlab\+I\+O\+::construct\+Matrix (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ char $>$ \&}]{name, }
+\item[{std\+::vector$<$ uint32\+\_\+t $>$ \&}]{dims, }
+\item[{std\+::vector$<$ char $>$ \&}]{real, }
+\item[{std\+::vector$<$ char $>$ \&}]{imag, }
+\item[{uint32\+\_\+t}]{stor\+\_\+type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_af7791c0ba5df21252b5408ea4e22f33b}
+\hypertarget{classMatlabIO_a86a5a57fe5ef8f636c2ee8838b3ee172}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!construct\+Matrix@{construct\+Matrix}}
+\index{construct\+Matrix@{construct\+Matrix}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{construct\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Matlab\+I\+O\+Container} Matlab\+I\+O\+::construct\+Matrix (
+\begin{DoxyParamCaption}
+\item[{vector$<$ char $>$ \&}]{name, }
+\item[{vector$<$ uint32\+\_\+t $>$ \&}]{dims, }
+\item[{vector$<$ char $>$ \&}]{real, }
+\item[{vector$<$ char $>$ \&}]{imag, }
+\item[{uint32\+\_\+t}]{stor\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{classMatlabIO_a86a5a57fe5ef8f636c2ee8838b3ee172}
+
+
+construct a matrix from an extracted set of fields 
+
+Given the variable size, name, data and data type, construct a matrix. Note that Matlab may store variables in a different data type to the actual variable data type (T) to save space. For example matrix a = \mbox{[}1 2 3 4 5\mbox{]}; in Matlab will intrinsically be of type double (everything is unless otherwise explicitly stated) but could be stored as a uint8\+\_\+t to save space. The type of the variable returned should necessarily be double, since it\textquotesingle{}s impossible to know at compile time which data types Matlab has decided to store a set of variables in.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the variable name \\
+\hline
+{\em dims} & the variable dimensionality (i, j, k, ...) \\
+\hline
+{\em real} & the real part \\
+\hline
+{\em imag} & the imaginary part (imag.\+size() == 0 if the data is real) \\
+\hline
+{\em stor\+\_\+type} & the storage type of the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the wrapped matrix 
+\end{DoxyReturn}
+\hypertarget{classMatlabIO_aed0962e7b0c5bd53153b429e9e28fa25}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!construct\+Sparse@{construct\+Sparse}}
+\index{construct\+Sparse@{construct\+Sparse}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{construct\+Sparse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matlab\+I\+O\+Container} Matlab\+I\+O\+::construct\+Sparse (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ char $>$ \&}]{name, }
+\item[{std\+::vector$<$ uint32\+\_\+t $>$ \&}]{dims, }
+\item[{std\+::vector$<$ char $>$ \&}]{real, }
+\item[{std\+::vector$<$ char $>$ \&}]{imag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_aed0962e7b0c5bd53153b429e9e28fa25}
+
+
+construct a sparse matrix 
+
+T\+O\+D\+O\+: implement this 
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em dims} & \\
+\hline
+{\em real} & \\
+\hline
+{\em imag} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classMatlabIO_af6932c5fdd2333201bef549c52a7febb}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!construct\+String@{construct\+String}}
+\index{construct\+String@{construct\+String}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{construct\+String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matlab\+I\+O\+Container} Matlab\+I\+O\+::construct\+String (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ char $>$ \&}]{name, }
+\item[{std\+::vector$<$ uint32\+\_\+t $>$ \&}]{dims, }
+\item[{std\+::vector$<$ char $>$ \&}]{real}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_af6932c5fdd2333201bef549c52a7febb}
+
+
+construct a string from an extracted set of fields 
+
+If the data is of type char, the data is stored as a string rather than a matrix. The dimensionality is ignored (the data is linearized)
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the variable name \\
+\hline
+{\em dims} & the variable dimensionality (ignored) \\
+\hline
+{\em real} & the string data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the wrapped string 
+\end{DoxyReturn}
+\hypertarget{classMatlabIO_ab5a35f3b0b204a182b7e6e0db857b8f6}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!construct\+Struct@{construct\+Struct}}
+\index{construct\+Struct@{construct\+Struct}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{construct\+Struct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matlab\+I\+O\+Container} Matlab\+I\+O\+::construct\+Struct (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ char $>$ \&}]{name, }
+\item[{std\+::vector$<$ uint32\+\_\+t $>$ \&}]{dims, }
+\item[{std\+::vector$<$ char $>$ \&}]{real}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_ab5a35f3b0b204a182b7e6e0db857b8f6}
+
+
+construct a structure 
+
+T\+O\+D\+O\+: implement this 
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em dims} & \\
+\hline
+{\em real} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classMatlabIO_ac14e19dce8bde88ffaac0ef062e77f8c}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!filename@{filename}}
+\index{filename@{filename}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{filename}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Matlab\+I\+O\+::filename (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIO_ac14e19dce8bde88ffaac0ef062e77f8c}
+\hypertarget{classMatlabIO_ae1bcaa4c1311943f9d4705bc1a26f30b}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!find@{find}}
+\index{find@{find}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T Matlab\+I\+O\+::find (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Matlab\+I\+O\+Container} $>$ \&}]{variables, }
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIO_ae1bcaa4c1311943f9d4705bc1a26f30b}
+\hypertarget{classMatlabIO_a942611dfb873b5a0130ef2b19e57dad5}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!find@{find}}
+\index{find@{find}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matlab\+I\+O\+Container} Matlab\+I\+O\+::find (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Matlab\+I\+O\+Container} $>$ \&}]{variables, }
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIO_a942611dfb873b5a0130ef2b19e57dad5}
+\hypertarget{classMatlabIO_a2b03786157af35694744fe3a0dfe7de7}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{get\+Header}]{\setlength{\rightskip}{0pt plus 5cm}void Matlab\+I\+O\+::get\+Header (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a2b03786157af35694744fe3a0dfe7de7}
+
+
+get the .Mat file header information 
+
+The fields read are\+: header\+\_\+ the matlab header as a human readable string, subsys\+\_\+ subsystem specific information, version\+\_\+ the .Mat file version (5 or 73), endian\+\_\+ the bye ordering of the .Mat file. If the byte ordering needs reversal, this is automatically handled by esfstream. \hypertarget{classMatlabIO_abe1cd90d98ee3ae4c9b1e0597e250339}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!has\+Variable@{has\+Variable}}
+\index{has\+Variable@{has\+Variable}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{has\+Variable}]{\setlength{\rightskip}{0pt plus 5cm}bool Matlab\+I\+O\+::has\+Variable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{classMatlabIO_abe1cd90d98ee3ae4c9b1e0597e250339}
+\hypertarget{classMatlabIO_a1170728ac5394d9d3d2647dc238838cb}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!is\+Primitive\+Type@{is\+Primitive\+Type}}
+\index{is\+Primitive\+Type@{is\+Primitive\+Type}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{is\+Primitive\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool Matlab\+I\+O\+::is\+Primitive\+Type (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIO_a1170728ac5394d9d3d2647dc238838cb}
+\hypertarget{classMatlabIO_a8827f80e835be574147e416397d7136d}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!open@{open}}
+\index{open@{open}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}bool Matlab\+I\+O\+::open (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{filename, }
+\item[{std\+::string}]{mode}
+\end{DoxyParamCaption}
+)}\label{classMatlabIO_a8827f80e835be574147e416397d7136d}
+
+
+Open a filestream for reading or writing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the full name and filepath of the file \\
+\hline
+{\em mode} & either \char`\"{}r\char`\"{} for reading or \char`\"{}w\char`\"{} for writing \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the file open succeeded, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classMatlabIO_aa6bcbec37f79990c3b9b5cd1d4d15c1c}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!read@{read}}
+\index{read@{read}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Matlab\+I\+O\+Container} $>$ Matlab\+I\+O\+::read (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classMatlabIO_aa6bcbec37f79990c3b9b5cd1d4d15c1c}
+
+
+Read all variables from a file. 
+
+Reads every variable encountered when parsing a valid Matlab .Mat file. If any of the variables is a function pointer, or other Matlab specific object, it will be passed. Most integral types will be parsed successfully. Matlab matrices will be converted to Open\+C\+V matrices of the same type. Note\+: Matlab stores images in R\+G\+B format whereas Open\+C\+V stores images in B\+G\+R format, so if displaying a parsed image using cv\+::imshow(), the colours will be inverted. \begin{DoxyReturn}{Returns}
+a vector of containers storing the name and data of each variable in the file 
+\end{DoxyReturn}
+\hypertarget{classMatlabIO_a40b79c5058418d9a2fee4706a9537bab}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!read\+Block@{read\+Block}}
+\index{read\+Block@{read\+Block}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{read\+Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matlab\+I\+O\+Container} Matlab\+I\+O\+::read\+Block (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a40b79c5058418d9a2fee4706a9537bab}
+
+
+read a block of data from the file being parsed 
+
+This function attempts to read an entire variable from the file being parsed. The data block is then encapsulated in a vector and passed onto \hyperlink{classMatlabIO_a0f491c5542d740b34d20d2ee4d561f73}{read\+Variable()} for interpretation. This design means that the file is touched a minimal number of times, and later manipulation of the data can make use of automatic memory management, reference counting, etc.
+
+\begin{DoxyReturn}{Returns}
+the block of data interpreted as a variable and stored in a generic container 
+\end{DoxyReturn}
+\hypertarget{classMatlabIO_a0f491c5542d740b34d20d2ee4d561f73}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!read\+Variable@{read\+Variable}}
+\index{read\+Variable@{read\+Variable}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{read\+Variable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matlab\+I\+O\+Container} Matlab\+I\+O\+::read\+Variable (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{data\+\_\+type, }
+\item[{uint32\+\_\+t}]{nbytes, }
+\item[{const std\+::vector$<$ char $>$ \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a0f491c5542d740b34d20d2ee4d561f73}
+
+
+Interpret a variable from a binary block of data. 
+
+This function may be called recursively when either uncompressing data or interpreting fields of a struct or cell array
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+type} & the type of the data stored in the binary blob \\
+\hline
+{\em nbytes} & the number of bytes that constitute the binary blob \\
+\hline
+{\em data} & the binary blob \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an interpreted variable 
+\end{DoxyReturn}
+\hypertarget{classMatlabIO_a49eeece26cd859efe5057a42a1964df5}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!read\+Variable\+Tag@{read\+Variable\+Tag}}
+\index{read\+Variable\+Tag@{read\+Variable\+Tag}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{read\+Variable\+Tag}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Matlab\+I\+O\+::read\+Variable\+Tag (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t \&}]{data\+\_\+type, }
+\item[{uint32\+\_\+t \&}]{dbytes, }
+\item[{uint32\+\_\+t \&}]{wbytes, }
+\item[{const char $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a49eeece26cd859efe5057a42a1964df5}
+
+
+interpret the variable header information 
+
+Given a binary data blob, determine the data type and number of bytes that constitute the data blob. This internally handles whether the header is in long or short format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+type} & the returned data type \\
+\hline
+{\em dbytes} & the returned number of bytes that constitute the data blob \\
+\hline
+{\em wbytes} & the whole number of bytes that include the header size, the size of the data and any padding to 64-\/bit boundaries. This is equivalent to the entire number of bytes effectively used by a variable \\
+\hline
+{\em data} & the input binary blob \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the beginning of the data segment of the binary blob 
+\end{DoxyReturn}
+\hypertarget{classMatlabIO_abd621bf430da76393e90c182b3f05cd3}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!set\+Header@{set\+Header}}
+\index{set\+Header@{set\+Header}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{set\+Header}]{\setlength{\rightskip}{0pt plus 5cm}void Matlab\+I\+O\+::set\+Header (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_abd621bf430da76393e90c182b3f05cd3}
+\hypertarget{classMatlabIO_a1a33cc9fd234f6c65560706a86869813}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!type\+Equals@{type\+Equals}}
+\index{type\+Equals@{type\+Equals}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{type\+Equals}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool Matlab\+I\+O\+::type\+Equals (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Matlab\+I\+O\+Container} $>$ \&}]{variables, }
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIO_a1a33cc9fd234f6c65560706a86869813}
+\hypertarget{classMatlabIO_a892a7998a32f4445dc64cd462d3f5622}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!uncompress\+From\+Bin@{uncompress\+From\+Bin}}
+\index{uncompress\+From\+Bin@{uncompress\+From\+Bin}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{uncompress\+From\+Bin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matlab\+I\+O\+Container} Matlab\+I\+O\+::uncompress\+From\+Bin (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ char $>$}]{data, }
+\item[{uint32\+\_\+t}]{nbytes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a892a7998a32f4445dc64cd462d3f5622}
+\hypertarget{classMatlabIO_a40d54d0d924bfba7f50ca14ed3e728e3}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!uncompress\+Variable@{uncompress\+Variable}}
+\index{uncompress\+Variable@{uncompress\+Variable}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{uncompress\+Variable}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ char $>$ Matlab\+I\+O\+::uncompress\+Variable (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t \&}]{data\+\_\+type, }
+\item[{uint32\+\_\+t \&}]{dbytes, }
+\item[{uint32\+\_\+t \&}]{wbytes, }
+\item[{const std\+::vector$<$ char $>$ \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a40d54d0d924bfba7f50ca14ed3e728e3}
+
+
+uncompress a variable 
+
+If the data type of a variable is M\+A\+T\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+E\+D, then the binary data blob has been compressed using zlib compression. This function uncompresses the blob, then calls \hyperlink{classMatlabIO_a0f491c5542d740b34d20d2ee4d561f73}{read\+Variable()} to interpret the actual data
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+type} & the type of the data stored in the binary blob \\
+\hline
+{\em dbytes} & the number of bytes that constitue the binary blob \\
+\hline
+{\em wbytes} & the whole number of bytes that consistute the header, the binary blob, and any padding to 64-\/bit boundaries \\
+\hline
+{\em data} & the binary blob \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the binary blob, uncompressed 
+\end{DoxyReturn}
+\hypertarget{classMatlabIO_a9ee52feb6ef61a3c8976da05757d40d1}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!whos@{whos}}
+\index{whos@{whos}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{whos}]{\setlength{\rightskip}{0pt plus 5cm}void Matlab\+I\+O\+::whos (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Matlab\+I\+O\+Container} $>$}]{variables}
+\end{DoxyParamCaption}
+) const}\label{classMatlabIO_a9ee52feb6ef61a3c8976da05757d40d1}
+
+
+Print a formatted list of the contents of a file. 
+
+Similar to the \textquotesingle{}whos\textquotesingle{} function in matlab, this function prints to stdout a list of variables and their C++ datatypes stored in the associated .Mat file 
+\begin{DoxyParams}{Parameters}
+{\em variables} & the variables read from the .Mat file using the \hyperlink{classMatlabIO_aa6bcbec37f79990c3b9b5cd1d4d15c1c}{read()} function \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Field Documentation}
+\hypertarget{classMatlabIO_a5b205de924e7d93cce1878b96e8090ef}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!byte\+\_\+swap\+\_\+@{byte\+\_\+swap\+\_\+}}
+\index{byte\+\_\+swap\+\_\+@{byte\+\_\+swap\+\_\+}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{byte\+\_\+swap\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}bool Matlab\+I\+O\+::byte\+\_\+swap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a5b205de924e7d93cce1878b96e8090ef}
+\hypertarget{classMatlabIO_a4af107166f7a854356b85a8ba8e2a575}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!bytes\+\_\+read\+\_\+@{bytes\+\_\+read\+\_\+}}
+\index{bytes\+\_\+read\+\_\+@{bytes\+\_\+read\+\_\+}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{bytes\+\_\+read\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}int Matlab\+I\+O\+::bytes\+\_\+read\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a4af107166f7a854356b85a8ba8e2a575}
+\hypertarget{classMatlabIO_a506fbbf7c76a1de2714f5fdc8d8ce891}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!endian\+\_\+@{endian\+\_\+}}
+\index{endian\+\_\+@{endian\+\_\+}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{endian\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}char Matlab\+I\+O\+::endian\+\_\+\mbox{[}{\bf E\+N\+D\+I\+A\+N\+\_\+\+L\+E\+N\+G\+T\+H}+1\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a506fbbf7c76a1de2714f5fdc8d8ce891}
+\hypertarget{classMatlabIO_a1eea9aa8bc8c8d92d70f75d1f2280357}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!E\+N\+D\+I\+A\+N\+\_\+\+L\+E\+N\+G\+T\+H@{E\+N\+D\+I\+A\+N\+\_\+\+L\+E\+N\+G\+T\+H}}
+\index{E\+N\+D\+I\+A\+N\+\_\+\+L\+E\+N\+G\+T\+H@{E\+N\+D\+I\+A\+N\+\_\+\+L\+E\+N\+G\+T\+H}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{E\+N\+D\+I\+A\+N\+\_\+\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}const int Matlab\+I\+O\+::\+E\+N\+D\+I\+A\+N\+\_\+\+L\+E\+N\+G\+T\+H = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classMatlabIO_a1eea9aa8bc8c8d92d70f75d1f2280357}
+\hypertarget{classMatlabIO_a7a1ace952046269e5c04680a06db336a}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!fid\+\_\+@{fid\+\_\+}}
+\index{fid\+\_\+@{fid\+\_\+}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{fid\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+F\+Stream} Matlab\+I\+O\+::fid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a7a1ace952046269e5c04680a06db336a}
+\hypertarget{classMatlabIO_ad28ac286cb3061ccba7362fc54a56187}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!filename\+\_\+@{filename\+\_\+}}
+\index{filename\+\_\+@{filename\+\_\+}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{filename\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Matlab\+I\+O\+::filename\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_ad28ac286cb3061ccba7362fc54a56187}
+\hypertarget{classMatlabIO_a8eba798a14b97539bd81c1d34fcdcd1b}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!header\+\_\+@{header\+\_\+}}
+\index{header\+\_\+@{header\+\_\+}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{header\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}char Matlab\+I\+O\+::header\+\_\+\mbox{[}{\bf H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H}+1\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a8eba798a14b97539bd81c1d34fcdcd1b}
+\hypertarget{classMatlabIO_af3e7951c954c76a502fe917a5438f102}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H@{H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H}}
+\index{H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H@{H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}const int Matlab\+I\+O\+::\+H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H = 116\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classMatlabIO_af3e7951c954c76a502fe917a5438f102}
+\hypertarget{classMatlabIO_a14f39bfe5a3e5877a606d2e176444b81}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!subsys\+\_\+@{subsys\+\_\+}}
+\index{subsys\+\_\+@{subsys\+\_\+}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{subsys\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}char Matlab\+I\+O\+::subsys\+\_\+\mbox{[}{\bf S\+U\+B\+S\+Y\+S\+\_\+\+L\+E\+N\+G\+T\+H}+1\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a14f39bfe5a3e5877a606d2e176444b81}
+\hypertarget{classMatlabIO_a0c4219a61f9d82ce15e309bfce18bab9}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!S\+U\+B\+S\+Y\+S\+\_\+\+L\+E\+N\+G\+T\+H@{S\+U\+B\+S\+Y\+S\+\_\+\+L\+E\+N\+G\+T\+H}}
+\index{S\+U\+B\+S\+Y\+S\+\_\+\+L\+E\+N\+G\+T\+H@{S\+U\+B\+S\+Y\+S\+\_\+\+L\+E\+N\+G\+T\+H}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{S\+U\+B\+S\+Y\+S\+\_\+\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}const int Matlab\+I\+O\+::\+S\+U\+B\+S\+Y\+S\+\_\+\+L\+E\+N\+G\+T\+H = 8\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classMatlabIO_a0c4219a61f9d82ce15e309bfce18bab9}
+\hypertarget{classMatlabIO_a73155405392e0c20d5098f462ebf405d}{}\index{Matlab\+I\+O@{Matlab\+I\+O}!version\+\_\+@{version\+\_\+}}
+\index{version\+\_\+@{version\+\_\+}!Matlab\+I\+O@{Matlab\+I\+O}}
+\subsubsection[{version\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}int16\+\_\+t Matlab\+I\+O\+::version\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIO_a73155405392e0c20d5098f462ebf405d}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\hyperlink{MatlabIO_8hpp}{Matlab\+I\+O.\+hpp}\item 
+/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/src/\hyperlink{MatlabIO_8cpp}{Matlab\+I\+O.\+cpp}\end{DoxyCompactItemize}

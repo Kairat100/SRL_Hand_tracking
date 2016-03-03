@@ -1,0 +1,32 @@
+\hypertarget{OpticalFlow_8hpp}{}\section{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\+Optical\+Flow.hpp File Reference}
+\label{OpticalFlow_8hpp}\index{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\+Optical\+Flow.\+hpp@{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\+Optical\+Flow.\+hpp}}
+{\ttfamily \#include \char`\"{}Dense\+Track.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+Include dependency graph for Optical\+Flow.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacemy}{my}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{namespacemy_a195edeea73a5667bbaabe20c9c369ce7}{my\+::\+Farneback\+Poly\+Exp} (const Mat \&src, Mat \&dst, int n, double sigma)
+\item 
+static void \hyperlink{namespacemy_a1618ca250804975e0f2f6713f67e5d08}{my\+::\+Farneback\+Update\+Matrices} (const Mat \&\+\_\+\+R0, const Mat \&\+\_\+\+R1, const Mat \&\+\_\+flow, Mat \&mat\+M, int \+\_\+y0, int \+\_\+y1)
+\item 
+static void \hyperlink{namespacemy_a4c2434c234366883fb13f6bc36707590}{my\+::\+Farneback\+Update\+Flow\+\_\+\+Gaussian\+Blur} (const Mat \&\+\_\+\+R0, const Mat \&\+\_\+\+R1, Mat \&\+\_\+flow, Mat \&mat\+M, int block\+\_\+size, bool update\+\_\+matrices)
+\item 
+void \hyperlink{namespacemy_ae9435daffac9af6cfa00756a579ba86d}{my\+::\+Median\+Blur\+Flow} (Mat \&flow, const int ksize)
+\item 
+void \hyperlink{namespacemy_ad985734c957006a836b8d56d373ced9d}{my\+::\+Farneback\+Poly\+Exp\+Pyr} (const Mat \&img, std\+::vector$<$ Mat $>$ \&poly\+\_\+exp\+\_\+pyr, std\+::vector$<$ float $>$ \&fscales, int poly\+\_\+n, double poly\+\_\+sigma)
+\item 
+void \hyperlink{namespacemy_aa7226ca3aea639def8602237f98dea9e}{my\+::calc\+Optical\+Flow\+Farneback} (std\+::vector$<$ Mat $>$ \&prev\+\_\+poly\+\_\+exp\+\_\+pyr, std\+::vector$<$ Mat $>$ \&poly\+\_\+exp\+\_\+pyr, std\+::vector$<$ Mat $>$ \&flow\+\_\+pyr, int winsize, int iterations)
+\item 
+void \hyperlink{namespacemy_a236e57a998e2596b4c1050c3d5464bfb}{my\+::\+Farneback\+Poly\+Exp2} (const Mat \&img, Mat \&poly\+\_\+exp\+\_\+pyr, int poly\+\_\+n, double poly\+\_\+sigma)
+\item 
+void \hyperlink{namespacemy_a65bdd5458ecc43dcaa1db19d87856ba8}{my\+::calc\+Optical\+Flow\+Farneback2} (Mat \&prev\+\_\+poly\+\_\+exp\+\_\+pyr, Mat \&poly\+\_\+exp\+\_\+pyr, Mat \&flow\+\_\+pyr, int winsize, int iterations)
+\end{DoxyCompactItemize}

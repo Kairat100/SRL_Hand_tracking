@@ -1,0 +1,82 @@
+\hypertarget{MatlabIO_8cpp}{}\section{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/src/\+Matlab\+I\+O.cpp File Reference}
+\label{MatlabIO_8cpp}\index{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/src/\+Matlab\+I\+O.\+cpp@{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/src/\+Matlab\+I\+O.\+cpp}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$cerrno$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$zlib.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$exception$>$}\\*
+{\ttfamily \#include \char`\"{}Matlab\+I\+O.\+hpp\char`\"{}}\\*
+Include dependency graph for Matlab\+I\+O.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{MatlabIO_8cpp_a2bd8a4a5f514db28ffc93f50c8376c83}{product} (const vector$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em product of the elements of a vector \end{DoxyCompactList}\item 
+void \hyperlink{MatlabIO_8cpp_ae373e2a9122085a3a01bb2e8a818fa83}{transpose\+Mat} (const Mat \&src, Mat \&dst)
+\begin{DoxyCompactList}\small\item\em transpose a multi-\/channel matrix \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T1 , class T2 $>$ }\\vector$<$ T2 $>$ \hyperlink{MatlabIO_8cpp_a09d22d34d69482169c7e5e0ed0c74115}{convert\+Primitive\+Type} (const vector$<$ char $>$ \&in)
+\begin{DoxyCompactList}\small\item\em convert the type of a variable \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{MatlabIO_8cpp_a09d22d34d69482169c7e5e0ed0c74115}{}\index{Matlab\+I\+O.\+cpp@{Matlab\+I\+O.\+cpp}!convert\+Primitive\+Type@{convert\+Primitive\+Type}}
+\index{convert\+Primitive\+Type@{convert\+Primitive\+Type}!Matlab\+I\+O.\+cpp@{Matlab\+I\+O.\+cpp}}
+\subsubsection[{convert\+Primitive\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T1 , class T2 $>$ vector$<$T2$>$ convert\+Primitive\+Type (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ char $>$ \&}]{in}
+\end{DoxyParamCaption}
+)}\label{MatlabIO_8cpp_a09d22d34d69482169c7e5e0ed0c74115}
+
+
+convert the type of a variable 
+
+Given a vector of type char, interpret the data as an vector of type T1, and convert it to a vector of type T2. 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input char vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the same data, reinterpreted as type T2 through storage type T1 
+\end{DoxyReturn}
+\hypertarget{MatlabIO_8cpp_a2bd8a4a5f514db28ffc93f50c8376c83}{}\index{Matlab\+I\+O.\+cpp@{Matlab\+I\+O.\+cpp}!product@{product}}
+\index{product@{product}!Matlab\+I\+O.\+cpp@{Matlab\+I\+O.\+cpp}}
+\subsubsection[{product}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T product (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ T $>$ \&}]{vec}
+\end{DoxyParamCaption}
+)}\label{MatlabIO_8cpp_a2bd8a4a5f514db28ffc93f50c8376c83}
+
+
+product of the elements of a vector 
+
+The function is useful for calculating the total number of elements in an array given a vector of dims. 
+\begin{DoxyParams}{Parameters}
+{\em vec} & the input vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the product of elements in the input 
+\end{DoxyReturn}
+\hypertarget{MatlabIO_8cpp_ae373e2a9122085a3a01bb2e8a818fa83}{}\index{Matlab\+I\+O.\+cpp@{Matlab\+I\+O.\+cpp}!transpose\+Mat@{transpose\+Mat}}
+\index{transpose\+Mat@{transpose\+Mat}!Matlab\+I\+O.\+cpp@{Matlab\+I\+O.\+cpp}}
+\subsubsection[{transpose\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}void transpose\+Mat (
+\begin{DoxyParamCaption}
+\item[{const Mat \&}]{src, }
+\item[{Mat \&}]{dst}
+\end{DoxyParamCaption}
+)}\label{MatlabIO_8cpp_ae373e2a9122085a3a01bb2e8a818fa83}
+
+
+transpose a multi-\/channel matrix 
+
+The Open\+C\+V builtin transpose method cannot tranpose multi-\/dimensional matrices. This function provides that capability by splitting the matrix into a vector of its channels, tranposing each channel, then merging the result back into a single multi-\/channel matrix
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & the input matrix \\
+\hline
+{\em dst} & the output matrix, where dst(i,j,k) == src(j,i,k) \\
+\hline
+\end{DoxyParams}

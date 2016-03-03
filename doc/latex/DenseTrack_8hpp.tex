@@ -1,0 +1,121 @@
+\hypertarget{DenseTrack_8hpp}{}\section{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\+Dense\+Track.hpp File Reference}
+\label{DenseTrack_8hpp}\index{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\+Dense\+Track.\+hpp@{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\+Dense\+Track.\+hpp}}
+{\ttfamily \#include $<$opencv/cv.\+h$>$}\\*
+{\ttfamily \#include $<$opencv/highgui.\+h$>$}\\*
+{\ttfamily \#include $<$opencv/cxcore.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+Include dependency graph for Dense\+Track.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structRectInfo}{Rect\+Info}
+\item 
+struct \hyperlink{structSeqInfo}{Seq\+Info}
+\item 
+struct \hyperlink{structTrackInfo}{Track\+Info}
+\item 
+struct \hyperlink{structDescInfo}{Desc\+Info}
+\item 
+struct \hyperlink{structDescMat}{Desc\+Mat}
+\item 
+class \hyperlink{classTrack}{Track}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{DenseTrack_8hpp_a92255abb174a4e9185f563d840598300}{start\+\_\+frame} = 0
+\item 
+int \hyperlink{DenseTrack_8hpp_a8ee14653364148d0872af3a66b659165}{end\+\_\+frame} = I\+N\+T\+\_\+\+M\+A\+X
+\item 
+int \hyperlink{DenseTrack_8hpp_a2d42f868a0e95200fc663fadeac14812}{scale\+\_\+num} = 1
+\item 
+const float \hyperlink{DenseTrack_8hpp_acc916219ba0a0585db19c243e282c199}{scale\+\_\+stride} = sqrt(2)
+\item 
+int \hyperlink{DenseTrack_8hpp_a20a53c0af56dcd5a2a66d07b00cf55c0}{patch\+\_\+size} = 32
+\item 
+int \hyperlink{DenseTrack_8hpp_ac252dd7f29fca110f9c1bc140e06b096}{nxy\+\_\+cell} = 2
+\item 
+int \hyperlink{DenseTrack_8hpp_af88dda2ed5be68f0b956e9a27f995ca1}{nt\+\_\+cell} = 3
+\item 
+float \hyperlink{DenseTrack_8hpp_a2dceb63003a97fa431d06d1d07edc449}{epsilon} = 0.\+05
+\item 
+const float \hyperlink{DenseTrack_8hpp_ab3b9f7faee1502c413f7873851c5dbdf}{min\+\_\+flow} = 0.\+4
+\item 
+double \hyperlink{DenseTrack_8hpp_a0cf861412cc3ca7bb976e8ba47353c98}{quality} = 0.\+001
+\item 
+int \hyperlink{DenseTrack_8hpp_ac788000c38d340a7927fbe2abd71d53c}{min\+\_\+distance} = 5
+\item 
+int \hyperlink{DenseTrack_8hpp_a0ff4a5d1619fb500a11956d5fbb6f2bb}{init\+\_\+gap} = 1
+\item 
+int \hyperlink{DenseTrack_8hpp_af54eba05dd37608bdfca6b768c783f91}{track\+\_\+length} = 15
+\item 
+const float \hyperlink{DenseTrack_8hpp_af9f864c11ae4ad08f39fbbf71ba33ebe}{min\+\_\+var} = sqrt(3)
+\item 
+const float \hyperlink{DenseTrack_8hpp_a91e7576c277bb883d6e92e39d42d335b}{max\+\_\+var} = 50
+\item 
+const float \hyperlink{DenseTrack_8hpp_ad9b2c1aa66ea8e2c3dfdcd40ed2504aa}{max\+\_\+dis} = 20
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{DenseTrack_8hpp_a8ee14653364148d0872af3a66b659165}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!end\+\_\+frame@{end\+\_\+frame}}
+\index{end\+\_\+frame@{end\+\_\+frame}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{end\+\_\+frame}]{\setlength{\rightskip}{0pt plus 5cm}int end\+\_\+frame = I\+N\+T\+\_\+\+M\+A\+X}\label{DenseTrack_8hpp_a8ee14653364148d0872af3a66b659165}
+\hypertarget{DenseTrack_8hpp_a2dceb63003a97fa431d06d1d07edc449}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!epsilon@{epsilon}}
+\index{epsilon@{epsilon}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{epsilon}]{\setlength{\rightskip}{0pt plus 5cm}float epsilon = 0.\+05}\label{DenseTrack_8hpp_a2dceb63003a97fa431d06d1d07edc449}
+\hypertarget{DenseTrack_8hpp_a0ff4a5d1619fb500a11956d5fbb6f2bb}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!init\+\_\+gap@{init\+\_\+gap}}
+\index{init\+\_\+gap@{init\+\_\+gap}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{init\+\_\+gap}]{\setlength{\rightskip}{0pt plus 5cm}int init\+\_\+gap = 1}\label{DenseTrack_8hpp_a0ff4a5d1619fb500a11956d5fbb6f2bb}
+\hypertarget{DenseTrack_8hpp_ad9b2c1aa66ea8e2c3dfdcd40ed2504aa}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!max\+\_\+dis@{max\+\_\+dis}}
+\index{max\+\_\+dis@{max\+\_\+dis}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{max\+\_\+dis}]{\setlength{\rightskip}{0pt plus 5cm}const float max\+\_\+dis = 20}\label{DenseTrack_8hpp_ad9b2c1aa66ea8e2c3dfdcd40ed2504aa}
+\hypertarget{DenseTrack_8hpp_a91e7576c277bb883d6e92e39d42d335b}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!max\+\_\+var@{max\+\_\+var}}
+\index{max\+\_\+var@{max\+\_\+var}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{max\+\_\+var}]{\setlength{\rightskip}{0pt plus 5cm}const float max\+\_\+var = 50}\label{DenseTrack_8hpp_a91e7576c277bb883d6e92e39d42d335b}
+\hypertarget{DenseTrack_8hpp_ac788000c38d340a7927fbe2abd71d53c}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!min\+\_\+distance@{min\+\_\+distance}}
+\index{min\+\_\+distance@{min\+\_\+distance}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{min\+\_\+distance}]{\setlength{\rightskip}{0pt plus 5cm}int min\+\_\+distance = 5}\label{DenseTrack_8hpp_ac788000c38d340a7927fbe2abd71d53c}
+\hypertarget{DenseTrack_8hpp_ab3b9f7faee1502c413f7873851c5dbdf}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!min\+\_\+flow@{min\+\_\+flow}}
+\index{min\+\_\+flow@{min\+\_\+flow}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{min\+\_\+flow}]{\setlength{\rightskip}{0pt plus 5cm}const float min\+\_\+flow = 0.\+4}\label{DenseTrack_8hpp_ab3b9f7faee1502c413f7873851c5dbdf}
+\hypertarget{DenseTrack_8hpp_af9f864c11ae4ad08f39fbbf71ba33ebe}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!min\+\_\+var@{min\+\_\+var}}
+\index{min\+\_\+var@{min\+\_\+var}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{min\+\_\+var}]{\setlength{\rightskip}{0pt plus 5cm}const float min\+\_\+var = sqrt(3)}\label{DenseTrack_8hpp_af9f864c11ae4ad08f39fbbf71ba33ebe}
+\hypertarget{DenseTrack_8hpp_af88dda2ed5be68f0b956e9a27f995ca1}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!nt\+\_\+cell@{nt\+\_\+cell}}
+\index{nt\+\_\+cell@{nt\+\_\+cell}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{nt\+\_\+cell}]{\setlength{\rightskip}{0pt plus 5cm}int nt\+\_\+cell = 3}\label{DenseTrack_8hpp_af88dda2ed5be68f0b956e9a27f995ca1}
+\hypertarget{DenseTrack_8hpp_ac252dd7f29fca110f9c1bc140e06b096}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!nxy\+\_\+cell@{nxy\+\_\+cell}}
+\index{nxy\+\_\+cell@{nxy\+\_\+cell}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{nxy\+\_\+cell}]{\setlength{\rightskip}{0pt plus 5cm}int nxy\+\_\+cell = 2}\label{DenseTrack_8hpp_ac252dd7f29fca110f9c1bc140e06b096}
+\hypertarget{DenseTrack_8hpp_a20a53c0af56dcd5a2a66d07b00cf55c0}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!patch\+\_\+size@{patch\+\_\+size}}
+\index{patch\+\_\+size@{patch\+\_\+size}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{patch\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}int patch\+\_\+size = 32}\label{DenseTrack_8hpp_a20a53c0af56dcd5a2a66d07b00cf55c0}
+\hypertarget{DenseTrack_8hpp_a0cf861412cc3ca7bb976e8ba47353c98}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!quality@{quality}}
+\index{quality@{quality}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{quality}]{\setlength{\rightskip}{0pt plus 5cm}double quality = 0.\+001}\label{DenseTrack_8hpp_a0cf861412cc3ca7bb976e8ba47353c98}
+\hypertarget{DenseTrack_8hpp_a2d42f868a0e95200fc663fadeac14812}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!scale\+\_\+num@{scale\+\_\+num}}
+\index{scale\+\_\+num@{scale\+\_\+num}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{scale\+\_\+num}]{\setlength{\rightskip}{0pt plus 5cm}int scale\+\_\+num = 1}\label{DenseTrack_8hpp_a2d42f868a0e95200fc663fadeac14812}
+\hypertarget{DenseTrack_8hpp_acc916219ba0a0585db19c243e282c199}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!scale\+\_\+stride@{scale\+\_\+stride}}
+\index{scale\+\_\+stride@{scale\+\_\+stride}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{scale\+\_\+stride}]{\setlength{\rightskip}{0pt plus 5cm}const float scale\+\_\+stride = sqrt(2)}\label{DenseTrack_8hpp_acc916219ba0a0585db19c243e282c199}
+\hypertarget{DenseTrack_8hpp_a92255abb174a4e9185f563d840598300}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!start\+\_\+frame@{start\+\_\+frame}}
+\index{start\+\_\+frame@{start\+\_\+frame}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{start\+\_\+frame}]{\setlength{\rightskip}{0pt plus 5cm}int start\+\_\+frame = 0}\label{DenseTrack_8hpp_a92255abb174a4e9185f563d840598300}
+\hypertarget{DenseTrack_8hpp_af54eba05dd37608bdfca6b768c783f91}{}\index{Dense\+Track.\+hpp@{Dense\+Track.\+hpp}!track\+\_\+length@{track\+\_\+length}}
+\index{track\+\_\+length@{track\+\_\+length}!Dense\+Track.\+hpp@{Dense\+Track.\+hpp}}
+\subsubsection[{track\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}int track\+\_\+length = 15}\label{DenseTrack_8hpp_af54eba05dd37608bdfca6b768c783f91}

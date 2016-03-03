@@ -1,0 +1,157 @@
+\hypertarget{Descriptors_8h}{}\section{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\+Descriptors.h File Reference}
+\label{Descriptors_8h}\index{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\+Descriptors.\+h@{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\+Descriptors.\+h}}
+{\ttfamily \#include \char`\"{}Dense\+Track.\+h\char`\"{}}\\*
+Include dependency graph for Descriptors.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Descriptors_8h_af7d24d40eb894245c296ed6f437f878a}{Get\+Rect} (const Point2f \&point, \hyperlink{structRectInfo}{Rect\+Info} \&rect, const int width, const int height, const \hyperlink{structDescInfo}{Desc\+Info} \&desc\+Info)
+\item 
+void \hyperlink{Descriptors_8h_a14710448f2a9d220fb47b2f324c69a72}{Build\+Desc\+Mat} (const Mat \&x\+Comp, const Mat \&y\+Comp, float $\ast$desc, const \hyperlink{structDescInfo}{Desc\+Info} \&desc\+Info)
+\item 
+void \hyperlink{Descriptors_8h_ae8eb152383eb30353f2d1d450c7fc86d}{Get\+Desc} (const \hyperlink{structDescMat}{Desc\+Mat} $\ast$desc\+Mat, \hyperlink{structRectInfo}{Rect\+Info} \&rect, \hyperlink{structDescInfo}{Desc\+Info} desc\+Info, std\+::vector$<$ float $>$ \&desc, const int index)
+\item 
+void \hyperlink{Descriptors_8h_a3ada8e7b351a6614753437aa179ac878}{Hog\+Comp} (const Mat \&img, float $\ast$desc, \hyperlink{structDescInfo}{Desc\+Info} \&desc\+Info)
+\item 
+void \hyperlink{Descriptors_8h_a15c9931adb371db4acd188373a45cbef}{Hof\+Comp} (const Mat \&flow, float $\ast$desc, \hyperlink{structDescInfo}{Desc\+Info} \&desc\+Info)
+\item 
+void \hyperlink{Descriptors_8h_aa360dfb2272473d08b8849880d21b6de}{Mbh\+Comp} (const Mat \&flow, float $\ast$desc\+X, float $\ast$desc\+Y, \hyperlink{structDescInfo}{Desc\+Info} \&desc\+Info)
+\item 
+bool \hyperlink{Descriptors_8h_a41d0c083aa1fb069003255544e7de56f}{Is\+Valid} (std\+::vector$<$ Point2f $>$ \&track, float \&mean\+\_\+x, float \&mean\+\_\+y, float \&var\+\_\+x, float \&var\+\_\+y, float \&length)
+\item 
+void \hyperlink{Descriptors_8h_ab0dc188f92ead67d173ca34181ee20ac}{Dense\+Sample} (const Mat \&grey, std\+::vector$<$ Point2f $>$ \&points, const double \hyperlink{DenseTrack_8h_a0cf861412cc3ca7bb976e8ba47353c98}{quality}, const int \hyperlink{DenseTrack_8h_ac788000c38d340a7927fbe2abd71d53c}{min\+\_\+distance})
+\item 
+void \hyperlink{Descriptors_8h_aede46d1978147aad062ec152a2e75047}{Init\+Pry} (const Mat \&frame, std\+::vector$<$ float $>$ \&scales, std\+::vector$<$ Size $>$ \&sizes)
+\item 
+void \hyperlink{Descriptors_8h_a78dc8879110f3a04377bd62f89bd48f0}{Build\+Pry} (const std\+::vector$<$ Size $>$ \&sizes, const int type, std\+::vector$<$ Mat $>$ \&grey\+\_\+pyr)
+\item 
+void \hyperlink{Descriptors_8h_a5dc3ecb61e88bb5d2ae463fdb438a0e4}{Draw\+Track} (const std\+::vector$<$ Point2f $>$ \&point, const int index, const float scale, int traj\+\_\+len, Mat \&image)
+\item 
+void \hyperlink{Descriptors_8h_a53e5cfc05d00c96a9c44d9495fe5ec59}{Print\+Desc} (std\+::vector$<$ float $>$ \&desc, \hyperlink{structDescInfo}{Desc\+Info} \&desc\+Info, \hyperlink{structTrackInfo}{Track\+Info} \&track\+Info)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{Descriptors_8h_a14710448f2a9d220fb47b2f324c69a72}{}\index{Descriptors.\+h@{Descriptors.\+h}!Build\+Desc\+Mat@{Build\+Desc\+Mat}}
+\index{Build\+Desc\+Mat@{Build\+Desc\+Mat}!Descriptors.\+h@{Descriptors.\+h}}
+\subsubsection[{Build\+Desc\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}void Build\+Desc\+Mat (
+\begin{DoxyParamCaption}
+\item[{const Mat \&}]{x\+Comp, }
+\item[{const Mat \&}]{y\+Comp, }
+\item[{float $\ast$}]{desc, }
+\item[{const {\bf Desc\+Info} \&}]{desc\+Info}
+\end{DoxyParamCaption}
+)}\label{Descriptors_8h_a14710448f2a9d220fb47b2f324c69a72}
+\hypertarget{Descriptors_8h_a78dc8879110f3a04377bd62f89bd48f0}{}\index{Descriptors.\+h@{Descriptors.\+h}!Build\+Pry@{Build\+Pry}}
+\index{Build\+Pry@{Build\+Pry}!Descriptors.\+h@{Descriptors.\+h}}
+\subsubsection[{Build\+Pry}]{\setlength{\rightskip}{0pt plus 5cm}void Build\+Pry (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Size $>$ \&}]{sizes, }
+\item[{const int}]{type, }
+\item[{std\+::vector$<$ Mat $>$ \&}]{grey\+\_\+pyr}
+\end{DoxyParamCaption}
+)}\label{Descriptors_8h_a78dc8879110f3a04377bd62f89bd48f0}
+\hypertarget{Descriptors_8h_ab0dc188f92ead67d173ca34181ee20ac}{}\index{Descriptors.\+h@{Descriptors.\+h}!Dense\+Sample@{Dense\+Sample}}
+\index{Dense\+Sample@{Dense\+Sample}!Descriptors.\+h@{Descriptors.\+h}}
+\subsubsection[{Dense\+Sample}]{\setlength{\rightskip}{0pt plus 5cm}void Dense\+Sample (
+\begin{DoxyParamCaption}
+\item[{const Mat \&}]{grey, }
+\item[{std\+::vector$<$ Point2f $>$ \&}]{points, }
+\item[{const double}]{quality, }
+\item[{const int}]{min\+\_\+distance}
+\end{DoxyParamCaption}
+)}\label{Descriptors_8h_ab0dc188f92ead67d173ca34181ee20ac}
+\hypertarget{Descriptors_8h_a5dc3ecb61e88bb5d2ae463fdb438a0e4}{}\index{Descriptors.\+h@{Descriptors.\+h}!Draw\+Track@{Draw\+Track}}
+\index{Draw\+Track@{Draw\+Track}!Descriptors.\+h@{Descriptors.\+h}}
+\subsubsection[{Draw\+Track}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Track (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Point2f $>$ \&}]{point, }
+\item[{const int}]{index, }
+\item[{const float}]{scale, }
+\item[{int}]{traj\+\_\+len, }
+\item[{Mat \&}]{image}
+\end{DoxyParamCaption}
+)}\label{Descriptors_8h_a5dc3ecb61e88bb5d2ae463fdb438a0e4}
+\hypertarget{Descriptors_8h_ae8eb152383eb30353f2d1d450c7fc86d}{}\index{Descriptors.\+h@{Descriptors.\+h}!Get\+Desc@{Get\+Desc}}
+\index{Get\+Desc@{Get\+Desc}!Descriptors.\+h@{Descriptors.\+h}}
+\subsubsection[{Get\+Desc}]{\setlength{\rightskip}{0pt plus 5cm}void Get\+Desc (
+\begin{DoxyParamCaption}
+\item[{const {\bf Desc\+Mat} $\ast$}]{desc\+Mat, }
+\item[{{\bf Rect\+Info} \&}]{rect, }
+\item[{{\bf Desc\+Info}}]{desc\+Info, }
+\item[{std\+::vector$<$ float $>$ \&}]{desc, }
+\item[{const int}]{index}
+\end{DoxyParamCaption}
+)}\label{Descriptors_8h_ae8eb152383eb30353f2d1d450c7fc86d}
+\hypertarget{Descriptors_8h_af7d24d40eb894245c296ed6f437f878a}{}\index{Descriptors.\+h@{Descriptors.\+h}!Get\+Rect@{Get\+Rect}}
+\index{Get\+Rect@{Get\+Rect}!Descriptors.\+h@{Descriptors.\+h}}
+\subsubsection[{Get\+Rect}]{\setlength{\rightskip}{0pt plus 5cm}void Get\+Rect (
+\begin{DoxyParamCaption}
+\item[{const Point2f \&}]{point, }
+\item[{{\bf Rect\+Info} \&}]{rect, }
+\item[{const int}]{width, }
+\item[{const int}]{height, }
+\item[{const {\bf Desc\+Info} \&}]{desc\+Info}
+\end{DoxyParamCaption}
+)}\label{Descriptors_8h_af7d24d40eb894245c296ed6f437f878a}
+\hypertarget{Descriptors_8h_a15c9931adb371db4acd188373a45cbef}{}\index{Descriptors.\+h@{Descriptors.\+h}!Hof\+Comp@{Hof\+Comp}}
+\index{Hof\+Comp@{Hof\+Comp}!Descriptors.\+h@{Descriptors.\+h}}
+\subsubsection[{Hof\+Comp}]{\setlength{\rightskip}{0pt plus 5cm}void Hof\+Comp (
+\begin{DoxyParamCaption}
+\item[{const Mat \&}]{flow, }
+\item[{float $\ast$}]{desc, }
+\item[{{\bf Desc\+Info} \&}]{desc\+Info}
+\end{DoxyParamCaption}
+)}\label{Descriptors_8h_a15c9931adb371db4acd188373a45cbef}
+\hypertarget{Descriptors_8h_a3ada8e7b351a6614753437aa179ac878}{}\index{Descriptors.\+h@{Descriptors.\+h}!Hog\+Comp@{Hog\+Comp}}
+\index{Hog\+Comp@{Hog\+Comp}!Descriptors.\+h@{Descriptors.\+h}}
+\subsubsection[{Hog\+Comp}]{\setlength{\rightskip}{0pt plus 5cm}void Hog\+Comp (
+\begin{DoxyParamCaption}
+\item[{const Mat \&}]{img, }
+\item[{float $\ast$}]{desc, }
+\item[{{\bf Desc\+Info} \&}]{desc\+Info}
+\end{DoxyParamCaption}
+)}\label{Descriptors_8h_a3ada8e7b351a6614753437aa179ac878}
+\hypertarget{Descriptors_8h_aede46d1978147aad062ec152a2e75047}{}\index{Descriptors.\+h@{Descriptors.\+h}!Init\+Pry@{Init\+Pry}}
+\index{Init\+Pry@{Init\+Pry}!Descriptors.\+h@{Descriptors.\+h}}
+\subsubsection[{Init\+Pry}]{\setlength{\rightskip}{0pt plus 5cm}void Init\+Pry (
+\begin{DoxyParamCaption}
+\item[{const Mat \&}]{frame, }
+\item[{std\+::vector$<$ float $>$ \&}]{scales, }
+\item[{std\+::vector$<$ Size $>$ \&}]{sizes}
+\end{DoxyParamCaption}
+)}\label{Descriptors_8h_aede46d1978147aad062ec152a2e75047}
+\hypertarget{Descriptors_8h_a41d0c083aa1fb069003255544e7de56f}{}\index{Descriptors.\+h@{Descriptors.\+h}!Is\+Valid@{Is\+Valid}}
+\index{Is\+Valid@{Is\+Valid}!Descriptors.\+h@{Descriptors.\+h}}
+\subsubsection[{Is\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool Is\+Valid (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ Point2f $>$ \&}]{track, }
+\item[{float \&}]{mean\+\_\+x, }
+\item[{float \&}]{mean\+\_\+y, }
+\item[{float \&}]{var\+\_\+x, }
+\item[{float \&}]{var\+\_\+y, }
+\item[{float \&}]{length}
+\end{DoxyParamCaption}
+)}\label{Descriptors_8h_a41d0c083aa1fb069003255544e7de56f}
+\hypertarget{Descriptors_8h_aa360dfb2272473d08b8849880d21b6de}{}\index{Descriptors.\+h@{Descriptors.\+h}!Mbh\+Comp@{Mbh\+Comp}}
+\index{Mbh\+Comp@{Mbh\+Comp}!Descriptors.\+h@{Descriptors.\+h}}
+\subsubsection[{Mbh\+Comp}]{\setlength{\rightskip}{0pt plus 5cm}void Mbh\+Comp (
+\begin{DoxyParamCaption}
+\item[{const Mat \&}]{flow, }
+\item[{float $\ast$}]{desc\+X, }
+\item[{float $\ast$}]{desc\+Y, }
+\item[{{\bf Desc\+Info} \&}]{desc\+Info}
+\end{DoxyParamCaption}
+)}\label{Descriptors_8h_aa360dfb2272473d08b8849880d21b6de}
+\hypertarget{Descriptors_8h_a53e5cfc05d00c96a9c44d9495fe5ec59}{}\index{Descriptors.\+h@{Descriptors.\+h}!Print\+Desc@{Print\+Desc}}
+\index{Print\+Desc@{Print\+Desc}!Descriptors.\+h@{Descriptors.\+h}}
+\subsubsection[{Print\+Desc}]{\setlength{\rightskip}{0pt plus 5cm}void Print\+Desc (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ float $>$ \&}]{desc, }
+\item[{{\bf Desc\+Info} \&}]{desc\+Info, }
+\item[{{\bf Track\+Info} \&}]{track\+Info}
+\end{DoxyParamCaption}
+)}\label{Descriptors_8h_a53e5cfc05d00c96a9c44d9495fe5ec59}

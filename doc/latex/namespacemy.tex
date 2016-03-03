@@ -1,0 +1,109 @@
+\hypertarget{namespacemy}{}\section{my Namespace Reference}
+\label{namespacemy}\index{my@{my}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{namespacemy_a195edeea73a5667bbaabe20c9c369ce7}{Farneback\+Poly\+Exp} (const Mat \&src, Mat \&dst, int n, double sigma)
+\item 
+static void \hyperlink{namespacemy_a1618ca250804975e0f2f6713f67e5d08}{Farneback\+Update\+Matrices} (const Mat \&\+\_\+\+R0, const Mat \&\+\_\+\+R1, const Mat \&\+\_\+flow, Mat \&mat\+M, int \+\_\+y0, int \+\_\+y1)
+\item 
+static void \hyperlink{namespacemy_a4c2434c234366883fb13f6bc36707590}{Farneback\+Update\+Flow\+\_\+\+Gaussian\+Blur} (const Mat \&\+\_\+\+R0, const Mat \&\+\_\+\+R1, Mat \&\+\_\+flow, Mat \&mat\+M, int block\+\_\+size, bool update\+\_\+matrices)
+\item 
+void \hyperlink{namespacemy_ae9435daffac9af6cfa00756a579ba86d}{Median\+Blur\+Flow} (Mat \&flow, const int ksize)
+\item 
+void \hyperlink{namespacemy_ad985734c957006a836b8d56d373ced9d}{Farneback\+Poly\+Exp\+Pyr} (const Mat \&img, std\+::vector$<$ Mat $>$ \&poly\+\_\+exp\+\_\+pyr, std\+::vector$<$ float $>$ \&fscales, int poly\+\_\+n, double poly\+\_\+sigma)
+\item 
+void \hyperlink{namespacemy_aa7226ca3aea639def8602237f98dea9e}{calc\+Optical\+Flow\+Farneback} (std\+::vector$<$ Mat $>$ \&prev\+\_\+poly\+\_\+exp\+\_\+pyr, std\+::vector$<$ Mat $>$ \&poly\+\_\+exp\+\_\+pyr, std\+::vector$<$ Mat $>$ \&flow\+\_\+pyr, int winsize, int iterations)
+\item 
+void \hyperlink{namespacemy_a236e57a998e2596b4c1050c3d5464bfb}{Farneback\+Poly\+Exp2} (const Mat \&img, Mat \&poly\+\_\+exp\+\_\+pyr, int poly\+\_\+n, double poly\+\_\+sigma)
+\item 
+void \hyperlink{namespacemy_a65bdd5458ecc43dcaa1db19d87856ba8}{calc\+Optical\+Flow\+Farneback2} (Mat \&prev\+\_\+poly\+\_\+exp\+\_\+pyr, Mat \&poly\+\_\+exp\+\_\+pyr, Mat \&flow\+\_\+pyr, int winsize, int iterations)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacemy_aa7226ca3aea639def8602237f98dea9e}{}\index{my@{my}!calc\+Optical\+Flow\+Farneback@{calc\+Optical\+Flow\+Farneback}}
+\index{calc\+Optical\+Flow\+Farneback@{calc\+Optical\+Flow\+Farneback}!my@{my}}
+\subsubsection[{calc\+Optical\+Flow\+Farneback}]{\setlength{\rightskip}{0pt plus 5cm}void my\+::calc\+Optical\+Flow\+Farneback (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ Mat $>$ \&}]{prev\+\_\+poly\+\_\+exp\+\_\+pyr, }
+\item[{std\+::vector$<$ Mat $>$ \&}]{poly\+\_\+exp\+\_\+pyr, }
+\item[{std\+::vector$<$ Mat $>$ \&}]{flow\+\_\+pyr, }
+\item[{int}]{winsize, }
+\item[{int}]{iterations}
+\end{DoxyParamCaption}
+)}\label{namespacemy_aa7226ca3aea639def8602237f98dea9e}
+\hypertarget{namespacemy_a65bdd5458ecc43dcaa1db19d87856ba8}{}\index{my@{my}!calc\+Optical\+Flow\+Farneback2@{calc\+Optical\+Flow\+Farneback2}}
+\index{calc\+Optical\+Flow\+Farneback2@{calc\+Optical\+Flow\+Farneback2}!my@{my}}
+\subsubsection[{calc\+Optical\+Flow\+Farneback2}]{\setlength{\rightskip}{0pt plus 5cm}void my\+::calc\+Optical\+Flow\+Farneback2 (
+\begin{DoxyParamCaption}
+\item[{Mat \&}]{prev\+\_\+poly\+\_\+exp\+\_\+pyr, }
+\item[{Mat \&}]{poly\+\_\+exp\+\_\+pyr, }
+\item[{Mat \&}]{flow\+\_\+pyr, }
+\item[{int}]{winsize, }
+\item[{int}]{iterations}
+\end{DoxyParamCaption}
+)}\label{namespacemy_a65bdd5458ecc43dcaa1db19d87856ba8}
+\hypertarget{namespacemy_a195edeea73a5667bbaabe20c9c369ce7}{}\index{my@{my}!Farneback\+Poly\+Exp@{Farneback\+Poly\+Exp}}
+\index{Farneback\+Poly\+Exp@{Farneback\+Poly\+Exp}!my@{my}}
+\subsubsection[{Farneback\+Poly\+Exp}]{\setlength{\rightskip}{0pt plus 5cm}static void my\+::\+Farneback\+Poly\+Exp (
+\begin{DoxyParamCaption}
+\item[{const Mat \&}]{src, }
+\item[{Mat \&}]{dst, }
+\item[{int}]{n, }
+\item[{double}]{sigma}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{namespacemy_a195edeea73a5667bbaabe20c9c369ce7}
+\hypertarget{namespacemy_a236e57a998e2596b4c1050c3d5464bfb}{}\index{my@{my}!Farneback\+Poly\+Exp2@{Farneback\+Poly\+Exp2}}
+\index{Farneback\+Poly\+Exp2@{Farneback\+Poly\+Exp2}!my@{my}}
+\subsubsection[{Farneback\+Poly\+Exp2}]{\setlength{\rightskip}{0pt plus 5cm}void my\+::\+Farneback\+Poly\+Exp2 (
+\begin{DoxyParamCaption}
+\item[{const Mat \&}]{img, }
+\item[{Mat \&}]{poly\+\_\+exp\+\_\+pyr, }
+\item[{int}]{poly\+\_\+n, }
+\item[{double}]{poly\+\_\+sigma}
+\end{DoxyParamCaption}
+)}\label{namespacemy_a236e57a998e2596b4c1050c3d5464bfb}
+\hypertarget{namespacemy_ad985734c957006a836b8d56d373ced9d}{}\index{my@{my}!Farneback\+Poly\+Exp\+Pyr@{Farneback\+Poly\+Exp\+Pyr}}
+\index{Farneback\+Poly\+Exp\+Pyr@{Farneback\+Poly\+Exp\+Pyr}!my@{my}}
+\subsubsection[{Farneback\+Poly\+Exp\+Pyr}]{\setlength{\rightskip}{0pt plus 5cm}void my\+::\+Farneback\+Poly\+Exp\+Pyr (
+\begin{DoxyParamCaption}
+\item[{const Mat \&}]{img, }
+\item[{std\+::vector$<$ Mat $>$ \&}]{poly\+\_\+exp\+\_\+pyr, }
+\item[{std\+::vector$<$ float $>$ \&}]{fscales, }
+\item[{int}]{poly\+\_\+n, }
+\item[{double}]{poly\+\_\+sigma}
+\end{DoxyParamCaption}
+)}\label{namespacemy_ad985734c957006a836b8d56d373ced9d}
+\hypertarget{namespacemy_a4c2434c234366883fb13f6bc36707590}{}\index{my@{my}!Farneback\+Update\+Flow\+\_\+\+Gaussian\+Blur@{Farneback\+Update\+Flow\+\_\+\+Gaussian\+Blur}}
+\index{Farneback\+Update\+Flow\+\_\+\+Gaussian\+Blur@{Farneback\+Update\+Flow\+\_\+\+Gaussian\+Blur}!my@{my}}
+\subsubsection[{Farneback\+Update\+Flow\+\_\+\+Gaussian\+Blur}]{\setlength{\rightskip}{0pt plus 5cm}static void my\+::\+Farneback\+Update\+Flow\+\_\+\+Gaussian\+Blur (
+\begin{DoxyParamCaption}
+\item[{const Mat \&}]{\+\_\+\+R0, }
+\item[{const Mat \&}]{\+\_\+\+R1, }
+\item[{Mat \&}]{\+\_\+flow, }
+\item[{Mat \&}]{mat\+M, }
+\item[{int}]{block\+\_\+size, }
+\item[{bool}]{update\+\_\+matrices}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{namespacemy_a4c2434c234366883fb13f6bc36707590}
+\hypertarget{namespacemy_a1618ca250804975e0f2f6713f67e5d08}{}\index{my@{my}!Farneback\+Update\+Matrices@{Farneback\+Update\+Matrices}}
+\index{Farneback\+Update\+Matrices@{Farneback\+Update\+Matrices}!my@{my}}
+\subsubsection[{Farneback\+Update\+Matrices}]{\setlength{\rightskip}{0pt plus 5cm}static void my\+::\+Farneback\+Update\+Matrices (
+\begin{DoxyParamCaption}
+\item[{const Mat \&}]{\+\_\+\+R0, }
+\item[{const Mat \&}]{\+\_\+\+R1, }
+\item[{const Mat \&}]{\+\_\+flow, }
+\item[{Mat \&}]{mat\+M, }
+\item[{int}]{\+\_\+y0, }
+\item[{int}]{\+\_\+y1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{namespacemy_a1618ca250804975e0f2f6713f67e5d08}
+\hypertarget{namespacemy_ae9435daffac9af6cfa00756a579ba86d}{}\index{my@{my}!Median\+Blur\+Flow@{Median\+Blur\+Flow}}
+\index{Median\+Blur\+Flow@{Median\+Blur\+Flow}!my@{my}}
+\subsubsection[{Median\+Blur\+Flow}]{\setlength{\rightskip}{0pt plus 5cm}void my\+::\+Median\+Blur\+Flow (
+\begin{DoxyParamCaption}
+\item[{Mat \&}]{flow, }
+\item[{const int}]{ksize}
+\end{DoxyParamCaption}
+)}\label{namespacemy_ae9435daffac9af6cfa00756a579ba86d}

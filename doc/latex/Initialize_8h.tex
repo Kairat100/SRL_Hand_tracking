@@ -1,0 +1,87 @@
+\hypertarget{Initialize_8h}{}\section{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\+Initialize.h File Reference}
+\label{Initialize_8h}\index{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\+Initialize.\+h@{/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\+Initialize.\+h}}
+{\ttfamily \#include \char`\"{}Dense\+Track.\+h\char`\"{}}\\*
+Include dependency graph for Initialize.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Initialize_8h_a277e14631495c252ea67fdbfeaf5e115}{Init\+Track\+Info} (\hyperlink{structTrackInfo}{Track\+Info} $\ast$track\+Info, int \hyperlink{DenseTrack_8h_af54eba05dd37608bdfca6b768c783f91}{track\+\_\+length}, int \hyperlink{DenseTrack_8h_a0ff4a5d1619fb500a11956d5fbb6f2bb}{init\+\_\+gap})
+\item 
+\hyperlink{structDescMat}{Desc\+Mat} $\ast$ \hyperlink{Initialize_8h_a6736ed6f2e97c2426473de79d658b6e6}{Init\+Desc\+Mat} (int height, int width, int n\+Bins)
+\item 
+void \hyperlink{Initialize_8h_a41f252789efef14d9448d73ee73986b2}{Rele\+Desc\+Mat} (\hyperlink{structDescMat}{Desc\+Mat} $\ast$desc\+Mat)
+\item 
+void \hyperlink{Initialize_8h_ab04f6f7e74964a0b79ad9e13f9863061}{Init\+Desc\+Info} (\hyperlink{structDescInfo}{Desc\+Info} $\ast$desc\+Info, int n\+Bins, bool is\+Hof, int size, int \hyperlink{DenseTrack_8h_ac252dd7f29fca110f9c1bc140e06b096}{nxy\+\_\+cell}, int \hyperlink{DenseTrack_8h_af88dda2ed5be68f0b956e9a27f995ca1}{nt\+\_\+cell})
+\item 
+void \hyperlink{Initialize_8h_aea8a66ded05816d17c50d7f3b4aacdc6}{Init\+Seq\+Info} (\hyperlink{structSeqInfo}{Seq\+Info} $\ast$seq\+Info, char $\ast$video)
+\item 
+void \hyperlink{Initialize_8h_a2ef30c42cbc289d899a8be5d2d8f77d0}{usage} ()
+\item 
+bool \hyperlink{Initialize_8h_a2b9db61739be50ab5102be37a63b99a3}{arg\+\_\+parse} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{Initialize_8h_a2b9db61739be50ab5102be37a63b99a3}{}\index{Initialize.\+h@{Initialize.\+h}!arg\+\_\+parse@{arg\+\_\+parse}}
+\index{arg\+\_\+parse@{arg\+\_\+parse}!Initialize.\+h@{Initialize.\+h}}
+\subsubsection[{arg\+\_\+parse}]{\setlength{\rightskip}{0pt plus 5cm}bool arg\+\_\+parse (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{Initialize_8h_a2b9db61739be50ab5102be37a63b99a3}
+\hypertarget{Initialize_8h_ab04f6f7e74964a0b79ad9e13f9863061}{}\index{Initialize.\+h@{Initialize.\+h}!Init\+Desc\+Info@{Init\+Desc\+Info}}
+\index{Init\+Desc\+Info@{Init\+Desc\+Info}!Initialize.\+h@{Initialize.\+h}}
+\subsubsection[{Init\+Desc\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Init\+Desc\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Desc\+Info} $\ast$}]{desc\+Info, }
+\item[{int}]{n\+Bins, }
+\item[{bool}]{is\+Hof, }
+\item[{int}]{size, }
+\item[{int}]{nxy\+\_\+cell, }
+\item[{int}]{nt\+\_\+cell}
+\end{DoxyParamCaption}
+)}\label{Initialize_8h_ab04f6f7e74964a0b79ad9e13f9863061}
+\hypertarget{Initialize_8h_a6736ed6f2e97c2426473de79d658b6e6}{}\index{Initialize.\+h@{Initialize.\+h}!Init\+Desc\+Mat@{Init\+Desc\+Mat}}
+\index{Init\+Desc\+Mat@{Init\+Desc\+Mat}!Initialize.\+h@{Initialize.\+h}}
+\subsubsection[{Init\+Desc\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Desc\+Mat}$\ast$ Init\+Desc\+Mat (
+\begin{DoxyParamCaption}
+\item[{int}]{height, }
+\item[{int}]{width, }
+\item[{int}]{n\+Bins}
+\end{DoxyParamCaption}
+)}\label{Initialize_8h_a6736ed6f2e97c2426473de79d658b6e6}
+\hypertarget{Initialize_8h_aea8a66ded05816d17c50d7f3b4aacdc6}{}\index{Initialize.\+h@{Initialize.\+h}!Init\+Seq\+Info@{Init\+Seq\+Info}}
+\index{Init\+Seq\+Info@{Init\+Seq\+Info}!Initialize.\+h@{Initialize.\+h}}
+\subsubsection[{Init\+Seq\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Init\+Seq\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Seq\+Info} $\ast$}]{seq\+Info, }
+\item[{char $\ast$}]{video}
+\end{DoxyParamCaption}
+)}\label{Initialize_8h_aea8a66ded05816d17c50d7f3b4aacdc6}
+\hypertarget{Initialize_8h_a277e14631495c252ea67fdbfeaf5e115}{}\index{Initialize.\+h@{Initialize.\+h}!Init\+Track\+Info@{Init\+Track\+Info}}
+\index{Init\+Track\+Info@{Init\+Track\+Info}!Initialize.\+h@{Initialize.\+h}}
+\subsubsection[{Init\+Track\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Init\+Track\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Track\+Info} $\ast$}]{track\+Info, }
+\item[{int}]{track\+\_\+length, }
+\item[{int}]{init\+\_\+gap}
+\end{DoxyParamCaption}
+)}\label{Initialize_8h_a277e14631495c252ea67fdbfeaf5e115}
+\hypertarget{Initialize_8h_a41f252789efef14d9448d73ee73986b2}{}\index{Initialize.\+h@{Initialize.\+h}!Rele\+Desc\+Mat@{Rele\+Desc\+Mat}}
+\index{Rele\+Desc\+Mat@{Rele\+Desc\+Mat}!Initialize.\+h@{Initialize.\+h}}
+\subsubsection[{Rele\+Desc\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}void Rele\+Desc\+Mat (
+\begin{DoxyParamCaption}
+\item[{{\bf Desc\+Mat} $\ast$}]{desc\+Mat}
+\end{DoxyParamCaption}
+)}\label{Initialize_8h_a41f252789efef14d9448d73ee73986b2}
+\hypertarget{Initialize_8h_a2ef30c42cbc289d899a8be5d2d8f77d0}{}\index{Initialize.\+h@{Initialize.\+h}!usage@{usage}}
+\index{usage@{usage}!Initialize.\+h@{Initialize.\+h}}
+\subsubsection[{usage}]{\setlength{\rightskip}{0pt plus 5cm}void usage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{Initialize_8h_a2ef30c42cbc289d899a8be5d2d8f77d0}

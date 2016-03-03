@@ -1,0 +1,3 @@
+/home/kairat/Dropbox/ComputerVision/Codes/PartsBasedDetector/build/src/CMakeFiles/PartsBasedDetector_bin.dir
+/home/kairat/Dropbox/ComputerVision/Codes/PartsBasedDetector/build/src/CMakeFiles/PartsBasedDetector_lib.dir
+/home/kairat/Dropbox/ComputerVision/Codes/PartsBasedDetector/build/CMakeFiles/PartsBasedDetector_doc.dir

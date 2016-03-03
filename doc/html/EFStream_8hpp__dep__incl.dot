@@ -1,0 +1,12 @@
+digraph "/home/kairat/Dropbox/ComputerVision/Codes/PartsBasedDetector/include/EFStream.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/home/kairat/Dropbox\l/ComputerVision/Codes\l/PartsBasedDetector/include\l/EFStream.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="/home/kairat/Dropbox\l/ComputerVision/Codes\l/PartsBasedDetector/include\l/MatlabIO.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$MatlabIO_8hpp.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="/home/kairat/Dropbox\l/ComputerVision/Codes\l/PartsBasedDetector/src\l/MatlabIO.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$MatlabIO_8cpp.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="/home/kairat/Dropbox\l/ComputerVision/Codes\l/PartsBasedDetector/src\l/MatlabIOModel.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$MatlabIOModel_8cpp.html"];
+}

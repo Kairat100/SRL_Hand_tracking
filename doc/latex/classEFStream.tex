@@ -1,0 +1,96 @@
+\hypertarget{classEFStream}{}\section{E\+F\+Stream Class Reference}
+\label{classEFStream}\index{E\+F\+Stream@{E\+F\+Stream}}
+
+
+Endian-\/swap File Stream.  
+
+
+
+
+{\ttfamily \#include $<$E\+F\+Stream.\+hpp$>$}
+
+
+
+Inheritance diagram for E\+F\+Stream\+:
+% FIG 0
+
+
+Collaboration diagram for E\+F\+Stream\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEFStream_a79e9741282d62a6fba8f9e649e307546}{E\+F\+Stream} ()
+\item 
+bool \hyperlink{classEFStream_a86ccb88060088d1e7bf278e45d2283b0}{byte\+Swap} (void)
+\item 
+void \hyperlink{classEFStream_a6cf46774a9ee06bd7d88012164e17694}{set\+Byte\+Swap} (bool state)
+\item 
+void \hyperlink{classEFStream_a075952e4563a027d683d8e3f9f4b4a1e}{swap\+Endian} (char $\ast$s, std\+::streamsize N)
+\item 
+std\+::istream \& \hyperlink{classEFStream_aaa86c07faca9c33d6d2c549a71ca5041}{read} (char $\ast$s, std\+::streamsize n)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classEFStream_a9e7b2aa69dc2abc88fcecbb61fd374b0}{byte\+\_\+swap\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Endian-\/swap File Stream. 
+
+fstream subclass with ability to do byte swapping (change endianness) of the incoming stream upon a read request 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classEFStream_a79e9741282d62a6fba8f9e649e307546}{}\index{E\+F\+Stream@{E\+F\+Stream}!E\+F\+Stream@{E\+F\+Stream}}
+\index{E\+F\+Stream@{E\+F\+Stream}!E\+F\+Stream@{E\+F\+Stream}}
+\subsubsection[{E\+F\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}E\+F\+Stream\+::\+E\+F\+Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classEFStream_a79e9741282d62a6fba8f9e649e307546}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classEFStream_a86ccb88060088d1e7bf278e45d2283b0}{}\index{E\+F\+Stream@{E\+F\+Stream}!byte\+Swap@{byte\+Swap}}
+\index{byte\+Swap@{byte\+Swap}!E\+F\+Stream@{E\+F\+Stream}}
+\subsubsection[{byte\+Swap}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+F\+Stream\+::byte\+Swap (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classEFStream_a86ccb88060088d1e7bf278e45d2283b0}
+\hypertarget{classEFStream_aaa86c07faca9c33d6d2c549a71ca5041}{}\index{E\+F\+Stream@{E\+F\+Stream}!read@{read}}
+\index{read@{read}!E\+F\+Stream@{E\+F\+Stream}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& E\+F\+Stream\+::read (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s, }
+\item[{std\+::streamsize}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classEFStream_aaa86c07faca9c33d6d2c549a71ca5041}
+\hypertarget{classEFStream_a6cf46774a9ee06bd7d88012164e17694}{}\index{E\+F\+Stream@{E\+F\+Stream}!set\+Byte\+Swap@{set\+Byte\+Swap}}
+\index{set\+Byte\+Swap@{set\+Byte\+Swap}!E\+F\+Stream@{E\+F\+Stream}}
+\subsubsection[{set\+Byte\+Swap}]{\setlength{\rightskip}{0pt plus 5cm}void E\+F\+Stream\+::set\+Byte\+Swap (
+\begin{DoxyParamCaption}
+\item[{bool}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classEFStream_a6cf46774a9ee06bd7d88012164e17694}
+\hypertarget{classEFStream_a075952e4563a027d683d8e3f9f4b4a1e}{}\index{E\+F\+Stream@{E\+F\+Stream}!swap\+Endian@{swap\+Endian}}
+\index{swap\+Endian@{swap\+Endian}!E\+F\+Stream@{E\+F\+Stream}}
+\subsubsection[{swap\+Endian}]{\setlength{\rightskip}{0pt plus 5cm}void E\+F\+Stream\+::swap\+Endian (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s, }
+\item[{std\+::streamsize}]{N}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classEFStream_a075952e4563a027d683d8e3f9f4b4a1e}
+
+
+\subsection{Field Documentation}
+\hypertarget{classEFStream_a9e7b2aa69dc2abc88fcecbb61fd374b0}{}\index{E\+F\+Stream@{E\+F\+Stream}!byte\+\_\+swap\+\_\+@{byte\+\_\+swap\+\_\+}}
+\index{byte\+\_\+swap\+\_\+@{byte\+\_\+swap\+\_\+}!E\+F\+Stream@{E\+F\+Stream}}
+\subsubsection[{byte\+\_\+swap\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+F\+Stream\+::byte\+\_\+swap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{classEFStream_a9e7b2aa69dc2abc88fcecbb61fd374b0}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\hyperlink{EFStream_8hpp}{E\+F\+Stream.\+hpp}\end{DoxyCompactItemize}

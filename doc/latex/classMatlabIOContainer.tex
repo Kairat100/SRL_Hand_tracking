@@ -1,0 +1,165 @@
+\hypertarget{classMatlabIOContainer}{}\section{Matlab\+I\+O\+Container Class Reference}
+\label{classMatlabIOContainer}\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+
+
+A container class for storing type agnostic variables.  
+
+
+
+
+{\ttfamily \#include $<$Matlab\+I\+O\+Container.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMatlabIOContainer_a0e5bc58bdbbcbd204ab05db007a2d517}{Matlab\+I\+O\+Container} ()
+\item 
+\hyperlink{classMatlabIOContainer_aaab5229c9da72d2f1c607c61f0d423e7}{Matlab\+I\+O\+Container} (const std\+::string \hyperlink{classMatlabIOContainer_adf16c7d11599cb42dc79719bb055bcc9}{name}, const boost\+::any \hyperlink{classMatlabIOContainer_ae99926a6f2e0112ba814fdd82f7e0655}{data})
+\begin{DoxyCompactList}\small\item\em Constructor to initalize the container with data and an associated name. \end{DoxyCompactList}\item 
+\hyperlink{classMatlabIOContainer_a46ca3eac34ba7875c35aee399630dd55}{$\sim$\+Matlab\+I\+O\+Container} ()
+\item 
+void \hyperlink{classMatlabIOContainer_adf010d08e4a0d64490bea465e3f97d3e}{set\+Name} (const std\+::string \hyperlink{classMatlabIOContainer_adf16c7d11599cb42dc79719bb055bcc9}{name})
+\item 
+void \hyperlink{classMatlabIOContainer_a0f38e59d5b11ca4df8dad494bc86996c}{set\+Data} (const boost\+::any \hyperlink{classMatlabIOContainer_ae99926a6f2e0112ba814fdd82f7e0655}{data})
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{classMatlabIOContainer_a7410b35f8d07409c20123d979e7b0e23}{type\+Equals} (void) const 
+\begin{DoxyCompactList}\small\item\em Check if the stored type is equal to the templated type. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classMatlabIOContainer_ae16dfe12f070893b5ebf164247eb21ad}{type} (void) const 
+\begin{DoxyCompactList}\small\item\em The type of the variable. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classMatlabIOContainer_adf16c7d11599cb42dc79719bb055bcc9}{name} (void) const 
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{classMatlabIOContainer_ae99926a6f2e0112ba814fdd82f7e0655}{data} (void) const 
+\begin{DoxyCompactList}\small\item\em The stored data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classMatlabIOContainer_a291ffb8f6782e91c06496ca248387a6d}{name\+\_\+}
+\item 
+boost\+::any \hyperlink{classMatlabIOContainer_a389fcd59a9a43a3b255eef894f2c06b0}{data\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A container class for storing type agnostic variables. 
+
+\hyperlink{classMatlabIOContainer}{Matlab\+I\+O\+Container} stores variables of any type using the boost\+::any type. This allows multiple Matlab\+I\+O\+Containers to be stored in a single vector when reading multiple variables from a file or constructing a Matlab struct. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMatlabIOContainer_a0e5bc58bdbbcbd204ab05db007a2d517}{}\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}!Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}!Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+\subsubsection[{Matlab\+I\+O\+Container}]{\setlength{\rightskip}{0pt plus 5cm}Matlab\+I\+O\+Container\+::\+Matlab\+I\+O\+Container (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIOContainer_a0e5bc58bdbbcbd204ab05db007a2d517}
+\hypertarget{classMatlabIOContainer_aaab5229c9da72d2f1c607c61f0d423e7}{}\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}!Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}!Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+\subsubsection[{Matlab\+I\+O\+Container}]{\setlength{\rightskip}{0pt plus 5cm}Matlab\+I\+O\+Container\+::\+Matlab\+I\+O\+Container (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{name, }
+\item[{const boost\+::any}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIOContainer_aaab5229c9da72d2f1c607c61f0d423e7}
+
+
+Constructor to initalize the container with data and an associated name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the string name of the variable \\
+\hline
+{\em data} & the associated data, of any type \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMatlabIOContainer_a46ca3eac34ba7875c35aee399630dd55}{}\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}!````~Matlab\+I\+O\+Container@{$\sim$\+Matlab\+I\+O\+Container}}
+\index{````~Matlab\+I\+O\+Container@{$\sim$\+Matlab\+I\+O\+Container}!Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+\subsubsection[{$\sim$\+Matlab\+I\+O\+Container}]{\setlength{\rightskip}{0pt plus 5cm}Matlab\+I\+O\+Container\+::$\sim$\+Matlab\+I\+O\+Container (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIOContainer_a46ca3eac34ba7875c35aee399630dd55}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMatlabIOContainer_ae99926a6f2e0112ba814fdd82f7e0655}{}\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}!data@{data}}
+\index{data@{data}!Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T Matlab\+I\+O\+Container\+::data (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIOContainer_ae99926a6f2e0112ba814fdd82f7e0655}
+
+
+The stored data. 
+
+Returns the stored data, cast to the templated type 
+\begin{DoxyExceptions}{Exceptions}
+{\em boost\+::bad\+\_\+any\+\_\+cast} & if the requested type is not the stored data type \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+the data 
+\end{DoxyReturn}
+\hypertarget{classMatlabIOContainer_adf16c7d11599cb42dc79719bb055bcc9}{}\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}!name@{name}}
+\index{name@{name}!Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Matlab\+I\+O\+Container\+::name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIOContainer_adf16c7d11599cb42dc79719bb055bcc9}
+\hypertarget{classMatlabIOContainer_a0f38e59d5b11ca4df8dad494bc86996c}{}\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}!set\+Data@{set\+Data}}
+\index{set\+Data@{set\+Data}!Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+\subsubsection[{set\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void Matlab\+I\+O\+Container\+::set\+Data (
+\begin{DoxyParamCaption}
+\item[{const boost\+::any}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIOContainer_a0f38e59d5b11ca4df8dad494bc86996c}
+\hypertarget{classMatlabIOContainer_adf010d08e4a0d64490bea465e3f97d3e}{}\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+\subsubsection[{set\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void Matlab\+I\+O\+Container\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIOContainer_adf010d08e4a0d64490bea465e3f97d3e}
+\hypertarget{classMatlabIOContainer_ae16dfe12f070893b5ebf164247eb21ad}{}\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}!type@{type}}
+\index{type@{type}!Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Matlab\+I\+O\+Container\+::type (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIOContainer_ae16dfe12f070893b5ebf164247eb21ad}
+
+
+The type of the variable. 
+
+Returns a string containing the type of the variable. This may or may not be human readable (Microsoft compilers will produce human readable outputs, G\+C\+C compilers will not) but are guaranteed to be unique for unique types \begin{DoxyReturn}{Returns}
+the variable type as a string 
+\end{DoxyReturn}
+\hypertarget{classMatlabIOContainer_a7410b35f8d07409c20123d979e7b0e23}{}\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}!type\+Equals@{type\+Equals}}
+\index{type\+Equals@{type\+Equals}!Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+\subsubsection[{type\+Equals}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool Matlab\+I\+O\+Container\+::type\+Equals (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classMatlabIOContainer_a7410b35f8d07409c20123d979e7b0e23}
+
+
+Check if the stored type is equal to the templated type. 
+
+This method uses typeid(\+T) internally, so child classes may return true if compared with their parent. \begin{DoxyReturn}{Returns}
+true if the types are equal (premised on the above conditions), false otherwise 
+\end{DoxyReturn}
+
+
+\subsection{Field Documentation}
+\hypertarget{classMatlabIOContainer_a389fcd59a9a43a3b255eef894f2c06b0}{}\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}!data\+\_\+@{data\+\_\+}}
+\index{data\+\_\+@{data\+\_\+}!Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+\subsubsection[{data\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::any Matlab\+I\+O\+Container\+::data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIOContainer_a389fcd59a9a43a3b255eef894f2c06b0}
+\hypertarget{classMatlabIOContainer_a291ffb8f6782e91c06496ca248387a6d}{}\index{Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}!name\+\_\+@{name\+\_\+}}
+\index{name\+\_\+@{name\+\_\+}!Matlab\+I\+O\+Container@{Matlab\+I\+O\+Container}}
+\subsubsection[{name\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Matlab\+I\+O\+Container\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{classMatlabIOContainer_a291ffb8f6782e91c06496ca248387a6d}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/kairat/\+Dropbox/\+Computer\+Vision/\+Codes/\+Parts\+Based\+Detector/include/\hyperlink{MatlabIOContainer_8hpp}{Matlab\+I\+O\+Container.\+hpp}\end{DoxyCompactItemize}
